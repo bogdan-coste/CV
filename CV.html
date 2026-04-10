@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Bogdan Coste · Curriculum Vitae</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f1f4f8;
+      font-family: 'Palatino', 'Georgia', 'Times New Roman', serif;
+      line-height: 1.5;
+      color: #1a2c3e;
+      padding: 2rem 1rem;
+    }
+
+    .cv-card {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.02);
+      overflow: hidden;
+    }
+
+    .cv-inner {
+      padding: 2.8rem 3rem;
+    }
+
+    /* header — clean, no gradient overcomplication */
+    .name-title {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .name {
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: #0b2b3b;
+      font-family: 'Palatino', 'Georgia', serif;
+      margin-bottom: 0.2rem;
+      line-height: 1.2;
+    }
+
+    .current-position {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #2c5a6e;
+      border-top: 1px solid #e2eaf1;
+      border-bottom: 1px solid #e2eaf1;
+      display: inline-block;
+      padding: 0.35rem 1.5rem;
+      margin-top: 0.3rem;
+      letter-spacing: 0.5px;
+      background: #fefefe;
+      border-radius: 40px;
+    }
+
+    .accent-divider {
+      height: 3px;
+      background: linear-gradient(90deg, #cbdde6, #4f8faa, #cbdde6);
+      width: 90px;
+      margin: 0.8rem auto 0.5rem auto;
+      border-radius: 4px;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.8rem;
+      margin: 1.2rem 0 0.6rem 0;
+      font-size: 0.88rem;
+      color: #2c3e50;
+      border-bottom: 1px solid #e9edf2;
+      padding-bottom: 1rem;
+    }
+
+    .contact-bar span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f8fafd;
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      transition: all 0.2s;
+    }
+
+    .contact-bar span:hover {
+      background: #eef3fc;
+      transform: translateY(-1px);
+    }
+
+    .contact-bar a {
+      color: #1f5e7e;
+      text-decoration: none;
+      border-bottom: 1px dotted #cbdde2;
+    }
+
+    .contact-bar a:hover {
+      color: #0a384d;
+      border-bottom: 1px solid #1f5e7e;
+    }
+
+    /* sections */
+    .section {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-heading {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #1f5e7e;
+      border-left: 4px solid #8aaec0;
+      padding-left: 0.9rem;
+      margin-bottom: 1.1rem;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+    }
+
+    .entry {
+      margin-bottom: 1.3rem;
+    }
+
+    .entry-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .entry-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #0b2b3b;
+    }
+
+    .entry-date {
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: #5a7388;
+      letter-spacing: 0.2px;
+      background: #f0f4f9;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+    }
+
+    .entry-sub {
+      font-style: italic;
+      font-size: 0.88rem;
+      color: #2c5a6e;
+      margin-bottom: 0.2rem;
+    }
+
+    .entry-desc {
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: #2d3e50;
+      margin-top: 0.3rem;
+      margin-left: 0.2rem;
+    }
+
+    .skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+    }
+
+    .skill-badge {
+      background: #ecf3f8;
+      padding: 0.25rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #1f5e7e;
+      transition: all 0.2s;
+    }
+
+    .project-entry {
+      margin-bottom: 2rem;
+      background: #fefefe;
+      border-radius: 20px;
+      padding: 1rem 1.2rem 1.2rem 1.5rem;
+      transition: all 0.2s ease;
+      border: 1px solid #eef2f8;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .project-entry:hover {
+      border-color: #d4e2ec;
+      box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 1.12rem;
+      color: #0f3b4f;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 3px solid #8aaec0;
+      padding-left: 0.7rem;
+    }
+
+    .project-subsection {
+      margin-top: 0.9rem;
+    }
+
+    .project-subheading {
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: #2c5a6e;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.3rem;
+      display: inline-block;
+      background: #f0f6fa;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+    }
+
+    .project-text {
+      font-size: 0.91rem;
+      line-height: 1.5;
+      color: #2d3e50;
+      margin-top: 0.3rem;
+    }
+
+    .metric-highlight {
+      background: #eef3fc;
+      font-weight: 600;
+      color: #1f5e7e;
+      padding: 0 0.2rem;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 0.88rem;
+    }
+
+    .cv-footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #7a8d9b;
+      border-top: 1px solid #e2eaf0;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 750px) {
+      .cv-inner {
+        padding: 1.6rem 1.4rem;
+      }
+      .name {
+        font-size: 2.2rem;
+      }
+      .section-heading {
+        font-size: 1rem;
+      }
+      .contact-bar {
+        gap: 0.8rem;
+        font-size: 0.75rem;
+      }
+      .project-entry {
+        padding: 0.8rem;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .cv-card {
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .skill-badge {
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+      }
+      .project-entry {
+        border: 1px solid #ddd;
+        box-shadow: none;
+      }
+      .contact-bar span {
+        background: none;
+        padding: 0;
+      }
+    }
+
+    a {
+      color: #1f5e7e;
+      text-decoration: none;
+      border-bottom: 1px dotted #cbdde2;
+    }
+    a:hover {
+      color: #0a384d;
+    }
+  </style>
+</head>
+<body>
+<div class="cv-card">
+  <div class="cv-inner">
+    
+    <!-- HEADER: fixed title as requested (clean, no gradient) -->
+    <div class="name-title">
+      <div class="name">Bogdan Coste</div>
+      <div class="current-position">Computer Science Student</div>
+      <div class="accent-divider"></div>
+    </div>
+    
+    <!-- CONTACT with actual GitHub and LinkedIn links -->
+    <div class="contact-bar">
+      <span>📧 bogdancooste432@gmail.com</span>
+      <span>📞 +40756101775</span>
+      <span>🔗 <a href="https://www.linkedin.com/in/bogdan-coste-47316428a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+      <span>💻 <a href="https://github.com/bogdan-coste" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+    </div>
+    
+    <!-- PROFILE (exact) -->
+    <div class="section">
+      <div class="section-heading">Profile</div>
+      <div class="entry-desc" style="margin-left:0;">Computer Science student at Babes-Bolyai University with a strong foundation in algorithms and software engineering. Dedicated to building clean, scalable software and solving complex debugging challenges. Adept at balancing structured development with creative problem-solving to deliver impactful, team-driven solutions.</div>
+    </div>
+    
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="section-heading">Education</div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Bachelor of Computer Science</span>
+          <span class="entry-date">2024 – 2027</span>
+        </div>
+        <div class="entry-sub">Babes-Bolyai University</div>
+      </div>
+    </div>
+    
+    <!-- SKILLS -->
+    <div class="section">
+      <div class="section-heading">Skills</div>
+      <div class="skill-items">
+        <span class="skill-badge">C/C++</span>
+        <span class="skill-badge">Java</span>
+        <span class="skill-badge">Python</span>
+        <span class="skill-badge">Bash</span>
+        <span class="skill-badge">Spring Boot / Spring</span>
+        <span class="skill-badge">Hibernate</span>
+        <span class="skill-badge">REST APIs</span>
+        <span class="skill-badge">Django</span>
+        <span class="skill-badge">Vue.js</span>
+        <span class="skill-badge">OOP</span>
+        <span class="skill-badge">DSA</span>
+        <span class="skill-badge">SOLID principles</span>
+        <span class="skill-badge">Linux</span>
+        <span class="skill-badge">Git</span>
+        <span class="skill-badge">CMake</span>
+        <span class="skill-badge">Docker</span>
+        <span class="skill-badge">PostgreSQL</span>
+        <span class="skill-badge">Time Management</span>
+        <span class="skill-badge">Critical Thinking</span>
+        <span class="skill-badge">Effective Communication</span>
+        <span class="skill-badge">Mathematics</span>
+        <span class="skill-badge">AI & Data Processing</span>
+      </div>
+    </div>
+    
+    <!-- LANGUAGES -->
+    <div class="section">
+      <div class="section-heading">Languages</div>
+      <div class="lang-text" style="font-size:0.92rem;">Romanian (native) &nbsp;|&nbsp; English (fluent)</div>
+    </div>
+    
+    <!-- VOLUNTEERING -->
+    <div class="section">
+      <div class="section-heading">Volunteering</div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">UBB Hermes Society – HR Department Member</span>
+        </div>
+        <div class="entry-desc">Involved in activities, contributing to the well being of the association.</div>
+      </div>
+    </div>
+    
+    <!-- ACHIEVEMENTS -->
+    <div class="section">
+      <div class="section-heading">Achievements</div>
+      
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">2025 Best Cluj-Napoca CodeRun Competition | TEAM LEADER</span>
+        </div>
+        <div class="entry-desc">Led a 3-person team to 5th place out of 42, managing a multidisciplinary Web and Game Dev challenge. Streamlined workflow by configuring development environments and toolchains for rapid team deployment. Engineered core solutions for Game Logic (SDL), Django, and JavaScript backend modules.</div>
+      </div>
+      
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">2024 Hermes Hackathon | TEAM MEMBER</span>
+        </div>
+        <div class="entry-desc">Collaborated with a team to develop a functional prototype within a strict 24-hour timeframe. Achieved 3rd Place overall. Focused on critical debugging and resolving technical or aesthetic errors in the final hours to ensure a successful demo.</div>
+      </div>
+      
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">National Mathematics Olympiad | NATIONAL QUALIFIER</span>
+        </div>
+        <div class="entry-desc">Qualified for the National Phase, representing the county. Secured 1st Place at the County Phase and 2nd Place at the Local Phase.</div>
+      </div>
+    </div>
+    
+    <!-- PROJECTS -->
+    <div class="section">
+      <div class="section-heading">Projects</div>
+      
+      <div class="project-entry">
+        <div class="project-title">⚙️ LumenFix – A Linux Utility</div>
+        <div class="project-subsection">
+          <div class="project-subheading">Core Engineering Impact</div>
+          <div class="project-text">Engineered a Linux system utility and GUI configuration tool for Nvidia GPUs, automating display driver patching workflows and reducing manual troubleshooting time by over <span class="metric-highlight">80%</span>. Integrated a real-time intelligence feed aggregating data from 3+ community sources, complemented by an initial repository of 10+ verified automation scripts engineered to mitigate system instabilities and reduce manual troubleshooting steps by up to <span class="metric-highlight">70%</span>.</div>
+        </div>
+        <div class="project-subsection">
+          <div class="project-subheading">Performance & Monitoring</div>
+          <div class="project-text">The application features a lightweight GUI control center (operating under <span class="metric-highlight">5MB RAM</span>) for NVIDIA GPUs, enabling users to monitor and tune 5+ hardware parameters (power, thermals, clocks) at 1-second polling intervals to enhance configuration efficiency.</div>
+        </div>
+        <div class="project-subsection">
+          <div class="project-subheading">Decision-Support Engine</div>
+          <div class="project-text">Engineered an automated decision-support engine evaluating 10+ distinct system states and failure conditions, generating targeted recommendations that reduce troubleshooting iterations by an estimated <span class="metric-highlight">50%</span>.</div>
+        </div>
+      </div>
+      
+      <div class="project-entry">
+        <div class="project-title">🛡️ Sentinel – A Social Media App</div>
+        <div class="project-subsection">
+          <div class="project-subheading">Architecture & Compliance</div>
+          <div class="project-text">Architectured a privacy-first social platform achieving <span class="metric-highlight">100% compliance</span> with EU GDPR standards by intentionally excluding third-party tracking metrics to ensure data integrity. Architectured a privacy-first social platform that prioritizes digital well-being by implementing ethical recommendation algorithms evaluating 10+ quality-centric factors, intentionally excluding intrusive tracking metrics to foster authentic user connections.</div>
+        </div>
+        <div class="project-subsection">
+          <div class="project-subheading">Safety & Moderation</div>
+          <div class="project-text">Incorporates a native 'Safeguarded Mode' for minors that dynamically enforces 3 distinct age-based engagement tiers. Proactively monitors for hazardous content through preemptive moderation layers operating with zero data retention to ensure a secure environment.</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FOOTER: centered as requested -->
+    <div class="cv-footer">
+      Curriculum Vitae — Bogdan Coste
+    </div>
+    
+  </div>
+</div>
+</body>
+</html>
