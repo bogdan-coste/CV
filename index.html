@@ -403,7 +403,6 @@
                 border-top: 1px solid #e2eaf0;
             }
 
-            /* Responsive Design */
             @media (max-width: 750px) {
                 .main-page {
                     padding: 1.5rem;
@@ -430,7 +429,6 @@
                 }
             }
 
-            /* Contact Zone Container */
             .contact-zone {
                 display: flex;
                 flex-wrap: wrap;
@@ -441,7 +439,6 @@
                 border-bottom: 1px solid #e9edf2;
             }
 
-            /* Individual Contact Item */
             .contact-item {
                 display: flex;
                 align-items: center;
@@ -458,17 +455,24 @@
                 transform: translateY(-2px);
             }
 
-            /* Strict Icon Sizing */
             .contact-icon {
-                width: 18px; /* Fixed size */
+                width: 18px;
                 height: 18px;
                 margin-right: 8px;
                 stroke: currentColor;
                 stroke-width: 2;
                 stroke-linecap: round;
                 stroke-linejoin: round;
-                fill: none; /* Prevents the black box effect */
-                flex-shrink: 0; /* Prevents it from getting squashed */
+                fill: none;
+                flex-shrink: 0;
+            }
+
+            .project-title > a,
+            .project-title > a:hover,
+            .project-title > a:visited,
+            .project-title > a:link {
+                text-decoration: none;
+                color: #1a4e3c;
             }
         </style>
     </head>
@@ -890,81 +894,99 @@
 
                 <div class="project-card">
                     <div class="project-title">
-                        🛡️ Sentinel – Privacy-Centric Social Infrastructure
+                        <a href="https://github.com/bogdan-coste/Sentinel"
+                            >🛡️ Sentinel – Privacy-Centric Social
+                            Infrastructure</a
+                        >
                     </div>
                     <div class="project-subsection">
-                        <div class="project-subheading">
-                            Backend Architecture & Performance
-                        </div>
+                        <div class="project-subheading">Description</div>
                         <div class="project-text">
-                            • Built a stateless, horizontally scalable backend
-                            (<strong>Java 17, Spring Boot, PostgreSQL</strong>)
-                            achieving <strong>sub-100ms latency</strong> via
-                            optimized DTOs and JWT authentication.
-                        </div>
-                    </div>
-                    <div class="project-subsection">
-                        <div class="project-subheading">
-                            Frontend & Feature-Driven Design
-                        </div>
-                        <div class="project-text">
-                            • Architected a modular frontend (<strong
-                                >Vue.js 3, TypeScript</strong
-                            >) using Feature-Driven Design (FDD) and the Barrel
-                            Pattern to enforce strict domain isolation.
+                            Sentinel is a social media platform built for
+                            <strong>100%</strong>
+                            EU GDPR compliance, focused on improving online
+                            interaction quality. It enhances privacy by running
+                            AI algorithms locally on the user's device. A
+                            dependency‑breaking algorithm drastically reduces
+                            addiction to online content. For minors, the
+                            platform uses local AI to estimate age and monitor
+                            behavior, providing tightened protection.
                         </div>
                     </div>
                     <div class="project-subsection">
-                        <div class="project-subheading">
-                            Edge AI, Privacy & Safety
-                        </div>
+                        <div class="project-subheading">Technologies</div>
                         <div class="project-text">
-                            • Pioneered an on-device
-                            <strong>Edge AI</strong> (ONNX) data model with a
-                            native Safeguarded Mode for minors, ensuring
-                            <strong>100% GDPR compliance</strong>. Containerized
-                            with Docker.
+                            • Sentinel uses a Java Spring Boot backend to handle
+                            server‑side logic and API endpoints, a PostgreSQL
+                            database for persistent data storage, a Vue.js
+                            frontend for the user interface, and Python with
+                            various libraries (such as TensorFlow or PyTorch) to
+                            run local AI algorithms for on‑device privacy
+                            processing, age estimation, and behavior monitoring.
+                        </div>
+                    </div>
+                    <div class="project-subsection">
+                        <div class="project-subheading">GOAL</div>
+                        <div class="project-text">
+                            • The goal of Sentinel is to achieve
+                            <strong>100% GDPR compliance</strong> with EU
+                            regulations while helping users foster more genuine
+                            online connections across all age groups. Data
+                            necessary to ensure legitimate use of the platform
+                            (such as age estimation and behavior monitoring for
+                            minor protection) is processed as required, but
+                            personal data that would be used for marketing
+                            purposes never leaves the user's device.
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-title">
-                        🐧 LumenFix – Linux Utility & Control Center
+                        <a href="https://github.com/bogdan-coste/LumenFix"
+                            >🐧 LumenFix – Linux Utility & GPU Control Center</a
+                        >
                     </div>
                     <div class="project-subsection">
-                        <div class="project-subheading">
-                            System Architecture & Secure IPC
-                        </div>
+                        <div class="project-subheading">Description</div>
                         <div class="project-text">
-                            • Engineered a secure Client-Daemon utility natively
-                            in <strong>C++20</strong>, bridging a
-                            <strong>GTK4/Wayland</strong> frontend with a
-                            privileged systemd daemon via
-                            <strong>D-Bus</strong> IPC.
-                        </div>
-                    </div>
-                    <div class="project-subsection">
-                        <div class="project-subheading">
-                            Automated Patching & OS Routing
-                        </div>
-                        <div class="project-text">
-                            • Developed a smart OS-detection engine and
-                            centralized bug tracker that deploys
-                            community-verified scripts to patch system
-                            vulnerabilities ahead of official upstream updates.
+                            •Built a GPU monitoring tool for Nvidia and AMD
+                            cards that allows real‑time adjustments of
+                            frequency, temperature, voltage, and other
+                            parameters. It retrieves distro‑specific driver
+                            patches and <strong>kernel‑level</strong> fixes from
+                            a <strong>community‑driven server</strong>,
+                            especially targeted at mitigating hard crashes on
+                            hybrid setups. The utility also provides
+                            <strong>AI</strong> suggestions for GPU tweaks based
+                            on the system's current state.
                         </div>
                     </div>
                     <div class="project-subsection">
-                        <div class="project-subheading">
-                            Hardware Telemetry & Driver Automation
-                        </div>
+                        <div class="project-subheading">Technologies</div>
                         <div class="project-text">
-                            • Unified
-                            <strong>Nvidia and AMD GPU</strong> telemetry and
-                            tuning into a single dashboard, featuring an
-                            automated background service for seamless
-                            proprietary driver installation.
+                            • The client is designed for deep integration into
+                            the Linux environment, built with modern standards
+                            using <strong>C++23</strong> and
+                            <strong>GTK4</strong>. The community backend is
+                            powered by <strong>Java Spring Boot</strong>, and
+                            the community-facing frontend is developed with
+                            <strong>Vue.js</strong>.
+                        </div>
+                    </div>
+                    <div class="project-subsection">
+                        <div class="project-subheading">GOALS</div>
+                        <div class="project-text">
+                            • The utility is designed to drastically improve the
+                            Linux GPU user experience – from easy monitoring of
+                            thermals, stats, and driver status to real‑time
+                            parameter control. Most importantly, it delivers
+                            automated, community‑tested fixes and system
+                            enhancements augmented by both community and AI
+                            oversight. By using AI to intelligently search and
+                            surface relevant community fixes, the tool reduces
+                            the time a user spends researching an issue online
+                            by <strong>more than half (50%)</strong>.
                         </div>
                     </div>
                 </div>
